@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #262a2f;   
+}
+
+.container{
+    width: clamp(20vw, 550px, 70vw);
+    padding: 24px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1e2225;
+    border-radius: 10px;
+}
+
+p{
+    color: #61dbfb;
+    font-weight: bold;
+
+}
+
+input,button{
+    width: 60%;
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+
+input{
+    background-color: transparent;
+    border-bottom: 2px solid #61dbfb;
+    font-size: 18px;
+    color: #c8ecf5;
+}
+
+button{
+    background-color: transparent;
+    border: 2px solid #61dbfb;
+    color: #61dbfb;
+    font-weight: bold;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 7px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #61dbfb;
+    color: #1e2225;
+}
+
+button:active{
+    background: #61dcfbe3;
+}
+
+.flex{
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    gap: 22px;
+}
+
+#qrImage{
+    border: 5px dashed #61dbfb;
+    border-radius: 5px;
+}
+
+#imgBox{
+    width: clamp(10vw, 200px, 70vw);
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#imgBox img{
+    width: 100%;
+    /* padding: 10px; */
+}
+
+#imgBox.show-img{
+    margin: 10px auto;
+    max-height: 300px;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+    border-bottom: 2px solid #fb6161;
+
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
